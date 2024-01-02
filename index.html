@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator</title>
+    <style>
+        body {
+        margin: 0;
+       background-color: rgb(239, 221, 255);
+    }
+    .tombol{
+        background-color: rgb(208, 239, 250);
+    }
+    .tabel{
+        background-color: rgb(255, 106, 106);
+        margin: 10px;
+        padding: 10px;
+        border-radius: 8%;
+    }
+    .box-one{
+        background-color: rgb(255, 176, 145);
+        border-radius: 5%;
+    }
+    .box-two{
+        background-color: rgb(255, 176, 145);
+        border-radius: 5%;
+    }
+    </style>
+</head> 
+<body>
+     <form name="calculator">
+       <table class="tabel">
+       <caption>Kalkulator Sederhana</caption>
+     </div>
+    <br>
+    <div>
+        <td class="box-one">
+            <label for="number">Bilangan :</label><br>
+            <input type="number" id="a" name="Bilangan 1"><br>
+        </td>
+    </div>
+    <tr>
+    <div>
+    <td class="box-two">
+        <label for="number">Bilangan :</label><br>
+        <input type="number" id="b" name="Bilangan 2"><br>
+    </td>
+    </div>
+
+</tr>
+          <div>
+           <td colspan="3" align="center">
+            <button class="tombol" type="button" id="tambah">+</button>
+            <button class="tombol" type="button" id="kurang">-</button>
+            <button class="tombol" type="button" id="kali">*</button>
+            <button class="tombol" type="button" id="bagi">/</button>
+            <button class="tombol" type="button" id="modulo">%</button>
+           </td>
+          </div>
+          </tr>
+         </table>
+        </form>
+    <script>
+    document.getElementById("tambah").addEventListener("click", function () {
+   var a = document.getElementById("a").value;
+   var b = document.getElementById("b").value;
+   var hasil = Number(a) + Number(b);
+   alert("Hasil Penjumlahan = " + hasil);
+});
+document.getElementById("kurang").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) - Number(b);
+  alert("Hasil Pengurangan = " + hasil);
+});
+document.getElementById("kali").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) * Number(b);
+  alert("Hasil Perkalian = " + hasil);
+});
+document.getElementById("bagi").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) / Number(b);
+  alert("Hasil Pembagian = " + hasil);
+});
+document.getElementById("modulo").addEventListener("click", function () {
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var hasil = Number(a) % Number(b);
+  alert("Hasil Pembagian = " + hasil);
+});
+    </script>
+</body>
+</html>
